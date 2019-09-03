@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
+//    phpinfo();
     return view('welcome');
 });
 
 Route::get('user/add',"UserControllerr@add");
+Route::get('user/redis',"UserControllerr@getRedis");
 

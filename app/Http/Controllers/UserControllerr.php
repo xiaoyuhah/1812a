@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\User;
+use Illuminate\Support\Facades\Redis;
 
 class UserControllerr extends Controller
 {
@@ -15,5 +16,12 @@ class UserControllerr extends Controller
         ];
         $res = User::insertGetId($data);
         var_dump($res);
+    }
+
+    public function getRedis()
+    {
+        $key = 'abc';
+        $val = Redis::get($key);
+        var_dump($val);
     }
 }
