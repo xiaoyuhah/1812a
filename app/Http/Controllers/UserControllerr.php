@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redis;
 
 class UserControllerr extends Controller
 {
+	//添加
     public function add()
     {
         $data = [
