@@ -19,7 +19,7 @@ class UserControllerr extends Controller
         var_dump($res);
     }
 
-    //redis  
+    //redis
     public function getRedis()
     {
         $key = 'abc';
