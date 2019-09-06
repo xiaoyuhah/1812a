@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('user/add',"UserControllerr@add");
-Route::get('user/redis',"UserControllerr@getRedis");
+//Route::get('user/add',"UserControllerr@add");
+//Route::get('user/redis',"UserControllerr@getRedis");
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
